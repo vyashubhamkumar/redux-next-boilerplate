@@ -23,9 +23,9 @@ export default function Home() {
 
   }, [dispatch])
 
-  const loading = useSelector((state: RootState) => state.base.storeLoaded);
+  const loaded = useSelector((state: RootState) => state.base.storeLoaded);
 
-  if(!loading) {
+  if(!loaded) {
     return <Loading />;
   }
 
